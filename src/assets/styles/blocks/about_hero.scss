@@ -1,0 +1,41 @@
+.hero {
+  position: relative;
+}
+
+.hero__links {
+  padding: 30px;
+}
+.hero__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__title {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.user__pic-img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.user__name {
+  @include Roboto-Medium();
+  font-size: 35px;
+  color: #fff;
+}
+
+.user__info {
+  @include Roboto-Regular();
+  font-size: 16px;
+  color: #fff;
+}
+
+.hero__down-btns {
+  position: absolute;
+  left: 50%;
+  top: rem(120px);
+}
