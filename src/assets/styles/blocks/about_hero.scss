@@ -1,10 +1,12 @@
 .hero {
   position: relative;
+  background: url('./images/header_main.jpg') center center no-repeat;
 }
 
 .hero__links {
   padding: 30px;
 }
+
 .hero__header {
   display: flex;
   justify-content: space-between;
