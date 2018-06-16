@@ -1,43 +1,97 @@
 .hero {
+  height: 100vh;
   position: relative;
-  background: url('./images/header_main.jpg') center center no-repeat;
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  background: url('./assets/images/header_main.jpg') center center no-repeat;
 }
 
 .hero__links {
   padding: 30px;
+  height: 100%;
+  //display: flex;
+ // align-items: center;
 }
 
 .hero__header {
   display: flex;
   justify-content: space-between;
+  //margin-bottom: 65px;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.socials__link-icon {
+  fill: #fff;
+  width: 40px;
+  height: 25px;
+  margin-right: 20px;
+  //:nth-last-child(1) {
+   // fill: #004cd1;
+//}
+}
+
+.hero__content {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-direction: column;
+   //flex: 1 1 auto;
+   position: relative;
 }
 
 .hero__title {
+  //position: absolute;
+//  top: 50%;
+ // transform: translateY(-50%);
+ // height: 100%;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  //flex: 1 1 auto;
+}
+
+.section-title {
+  height: 100%;
+  width: 100%; 
+  background: url('./assets/images/header_logo_fon.png') center center no-repeat;
+}
+
+.user__pic {
   display: flex;
-  align-items: center;
-  flex: 1 1 auto;
+  justify-content: center;
 }
 
 .user__pic-img {
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 145px;
+  height: 145px;
 }
 
 .user__name {
-  @include Roboto-Medium();
+  //@include Roboto-Medium();
   font-size: 35px;
   color: #fff;
+  text-align: center;
 }
 
 .user__info {
-  @include Roboto-Regular();
+ //@include Roboto-Regular();
+  display: flex;
+  justify-content: center; 
   font-size: 16px;
   color: #fff;
 }
 
 .hero__down-btns {
-  position: absolute;
+  //position: absolute;
+  //padding-top: 130px;
   left: 50%;
-  top: rem(120px);
+  //top: 120px;
 }

@@ -7,4 +7,74 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  
+  section.hero
+    .hero__links
+      - 
+        var socials = [
+          ['http://vk.com', 'vk'],
+          ['http://gh.com', 'github'],
+          ['http://in.com', 'in']
+          ]
+      .hero__header
+          ul.socials
+            each item in socials
+              li.socials__item
+                a(href=`${item[0]}`).socials__link
+                  +icon(item[1], 'socials__link-icon')
+          .hero__menu
+           a(href="").hamburger
+              img(src='./assets/images/icons/hamburger.svg', alt = "menu").hamburger-icon
+      .hero__content
+        .hero__title
+          .section-title
+            .user.hero__user
+               .user__pic
+                  img(src='./assets/images/header_logo.jpg', alt="").user__pic-img
+               .user__description
+                 .user__name блог
+                 .user__info Статьи, которые я написал
+  section.about
+    .about__left
+      .about__triangle
+        svg.triangle.triangle_fill_white
+      .about__left-main
+        .about__left-title
+          .block-title Обо мне
+        .about__left-content
+          .user-description
+            .user-description__image
+              img(src='./assets/images/header_logo.jpg', alt="").user-description__avatar
+            .user-description__data
+              .user-description__title
+                .block-subtitle Кто я 
+              .user-description__text.text-content
+                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
+                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
+    .about__right
+      .about__triangle
+        svg.triangle.triangle_fill_beige
+      .about__right-main
+        .about__right-title
+          .block-subtitle Чем я могу быть вам полезен
+        .about__right-description.text-content
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit mollitia nemo reprehenderit ipsam corrupti deleniti, blanditiis sit magni fuga eveniet hic sint illo? Quae harum voluptatem optio ipsum blanditiis. 
+        .about__right-content
+          - 
+            var skills = [
+              ['Frontend', [['Html5', 30], ['css3', 50], ['javascript & jQuery', 70]]],
+              ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js & npm', 70], ['Mongo.clb', 70]]],
+              ['Workflow', [['Git', 30], ['Gulp', 50], ['Bower', 70]]],
+            ]
+
+          ul.skills-list
+            each skillsrow in skills
+              li.skills-list__item.skills-row
+                .skills-row__title #{skillsrow[0]}
+                ul.skills-row__list
+                  each skill in skillsrow[1]
+                    li.skills-row__item
+                      figure.skill(data-percents="70")
+                        svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+                          circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
+                        .skill__title #{skill[0]}
