@@ -35,12 +35,15 @@ block content
                  .user__info Личный сайт разработчика
 
         a(href="").down-btn.hero__down-btns
-         img(src='./assets/images/icons/arrow-down.svg', alt = "arrow-down").hero__down-img
+           img(src='./assets/images/icons/arrow-down.svg', alt = "arrow-down").hero__down-img
+        .about__triangle
+        svg.triangle.triangle_fill_white
+        .about__triangle
+        svg.triangle.triangle_fill_beige
 
   section.about
     .about__left
-      .about__triangle
-        svg.triangle.triangle_fill_white
+      
       .about__left-main
         .about__left-title
           .block-title Обо мне
@@ -52,16 +55,15 @@ block content
               .user-description__title
                 .block-subtitle Кто я 
               .user-description__text.text-content
-                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
-                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
+                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
     .about__right
-      .about__triangle
-        svg.triangle.triangle_fill_beige
+      
       .about__right-main
         .about__right-title
           .block-subtitle Чем я могу быть вам полезен
         .about__right-description.text-content
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit mollitia nemo reprehenderit ipsam corrupti deleniti, blanditiis sit magni fuga eveniet hic sint illo? Quae harum voluptatem optio ipsum blanditiis. 
+          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку. 
         .about__right-content
           - 
             var skills = [
@@ -93,18 +95,21 @@ block content
           ul.contacts__list
             - 
               var contacts = [
-                ['skype', 'skype_kdn'],
-                ['skype', 'skype_kdn'],
-                ['skype', 'skype_kdn'],
-                ['skype', 'skype_kdn']
+                ['skype', 'smi.tomsk'],
+                ['phone', '+7 983 302 3806'],
+                ['envelope_n', 'smi.tomsk@gmail.com'],
+                ['map_n', 'Новосибирск, ул. Лебедевского, д. 2/2']
               ]
             each item in contacts
-              li.contacts__item.contacts-row
+              li.contacts__item
                 .contacts-row.contacts__icon
-                  +icon(`../${item[0]}`, 'contacts__icon-img')
+                  +icon(item[0], 'contacts__icon-img')
                 .contacts-row.contacts__title #{item[1]}
-
-  footer.footer
+  footer.footer.main__footer
+    .footer__row
+      .footer__col
+        .footer__text
+          p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
     .footer__row
       .footer__col
         nav.menu
@@ -114,11 +119,16 @@ block content
                 a(href="").menu__link #{item}
 
       .footer__col.footer__col_justify_end
-      //  +socials(socials, 'socials_round')
+        ul.socials
+            each item in socials
+              li.socials__item
+                a(href=`${item[0]}`).socials__link
+                  +icon(item[1], 'socials__link-icon socials__link-icon-opacity')
 
     .footer__row
       .footer__col
-        .footer__text
-          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam distinctio, explicabo quaerat vero ipsum corrupti facilis sit consequuntur, doloribus similique iste error, cupiditate ullam dignissimos minima. Ratione quod voluptates deserunt.
-      .footer__col.footer__col_justify_end
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam distinctio, explicabo quaerat vero ipsum corrupti facilis sit consequuntur, doloribus similique iste error, cupiditate ullam dignissimos minima. Ratione quod voluptates deserunt.
+        .col__menu
+          ul.footer-contacts__list
+            each item in contacts
+              li.footer-contacts__item
+                .footer-contacts__link #{item[1]}

@@ -31,9 +31,9 @@
   width: 40px;
   height: 25px;
   margin-right: 20px;
-  //:nth-last-child(1) {
-   // fill: #004cd1;
-//}
+  &:hover {  
+    fill: #004cd1;
+}
 }
 
 .hero__content {
@@ -47,14 +47,7 @@
 }
 
 .hero__title {
-  //position: absolute;
-//  top: 50%;
- // transform: translateY(-50%);
- // height: 100%;
-  //display: flex;
-  //align-items: center;
-  //justify-content: center;
-  //flex: 1 1 auto;
+  
 }
 
 .section-title {
@@ -75,7 +68,7 @@
 }
 
 .user__name {
-  //@include Roboto-Medium();
+  font-family: Roboto-Medium;
   font-size: 35px;
   color: #fff;
   text-align: center;

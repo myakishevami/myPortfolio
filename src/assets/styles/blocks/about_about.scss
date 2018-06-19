@@ -10,12 +10,8 @@
   font-size: 63px;
   color: #474b57;
   text-align: center;
-  // @include Sansus-Webissimo-Regular();
+  font-family: Sansus-Webissimo-Regular;
   background: url('./assets/images/stars2.png') center center no-repeat;
-}
-
-.about__left {
- 
 }
 
 .about__left-main {
@@ -35,12 +31,16 @@
 
 .triangle {
   background-color: #f52366;
-  width: 100%;
+  width: 50vw;
 }
 
 .user-description__avatar {
   width: 100%;
  // height: 390px;
+}
+
+.about__right {
+  width: 50vw;
 }
 
 .about__right-main {
@@ -70,7 +70,7 @@
 .skill__circle {
   fill: transparent;
   stroke: #1056d1;
-  stroke-width: 20px; 
+  stroke-width: 18px; 
 }
 
 .skill__circle_above {
@@ -99,17 +99,19 @@
   align-items: center;
   justify-content: center;
   color: #243994;
-  font-size: 13,96px;
+  font-size: 13.96px;
   text-align: center;
- // @include Roboto-Medium();
+  font-family: Roboto-Medium;
 }
 
 .block-subtitle {
- // padding: 0 33vw;
+ padding-bottom: 1.875rem;
  width: 300px;
  text-align: center;
  margin: 0 auto;
   color: #474b57;
   font-size: 35px;
- // @include Sansus-Webissimo-Regular();
+  border-bottom: #474b57 4px solid;
+  margin-bottom: 1.875rem;
+  font-family: Sansus-Webissimo-Regular;
 }

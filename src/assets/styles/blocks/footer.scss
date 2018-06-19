@@ -1,0 +1,28 @@
+.main__footer {
+  background-color: rgba(28,31,41,0.85);
+  position: absolute;
+  top: 90%;
+  display: flex;
+  width: 100vw;
+  color: #fff;
+}
+
+.footer__row {
+  width: 33%;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__link {
+  color: #fff;
+  font-family: Roboto-Bold;
+  font-size: 15.77px;
+  padding-right: 40px;
+  //opacity: 0.5;
+}
+
+.socials__link-icon-opacity {
+  opacity: 0.5;
+}
