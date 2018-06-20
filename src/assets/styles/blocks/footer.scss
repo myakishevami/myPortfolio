@@ -1,28 +1,59 @@
+.footer {
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+  bottom:0;
+  margin: 0 auto;
+  width: 100vw;
+ //height: 100%;
+  background-color: rgba(8,60,150,0.85);
+  color: #fff;
+  font-size: 16px;
+  font-family: Roboto-Light;
+  z-index: 10;
+}
+
 .main__footer {
   background-color: rgba(28,31,41,0.85);
   position: absolute;
-  top: 90%;
+ // top: 90%;
+  bottom: 0;
+  //height: 100%;
+  //margin: 0 auto;
   display: flex;
   width: 100vw;
   color: #fff;
+  z-index: 5;
 }
 
 .footer__row {
   width: 33%;
+  padding: 30px 20px 58px 20px;
 }
 
 .menu__list {
   display: flex;
+  padding-bottom: 25px;
+}
+
+.menu__item {
+  padding-right: 2vw;
 }
 
 .menu__link {
   color: #fff;
   font-family: Roboto-Bold;
   font-size: 15.77px;
-  padding-right: 40px;
+  
+  width: 100%;
   //opacity: 0.5;
 }
 
 .socials__link-icon-opacity {
   opacity: 0.5;
+}
+
+.footer__text {
+  font-family: Roboto Light;
+  font-size: 16px;
 }

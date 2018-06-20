@@ -23,7 +23,8 @@ block content
                   +icon(item[1], 'socials__link-icon')
           .hero__menu
            a(href="").hamburger
-              img(src='./assets/images/icons/hamburger.svg', alt = "menu").hamburger-icon
+                +icon('hamburger', 'socials__link-icon')
+              
       .hero__content
         .hero__title
           .section-title
@@ -35,11 +36,16 @@ block content
                  .user__info Личный сайт разработчика
 
         a(href="").down-btn.hero__down-btns
-           img(src='./assets/images/icons/arrow-down.svg', alt = "arrow-down").hero__down-img
-        .about__triangle
-        svg.triangle.triangle_fill_white
-        .about__triangle
-        svg.triangle.triangle_fill_beige
+           +icon('arrow_down', 'hero__down-icon')
+
+    .about__triangles
+      .triangles
+        .triangles__left
+          svg(viewbox = "0 0 180 900").triangle.triangle__left
+            polygon(points = "0 0, 0 180, 900 180")
+        .triangles__right  
+          svg(viewbox = "0 0 900 180").triangle.triangle__right
+            polygon(points = "900 0, 900 180, 0 180")
 
   section.about
     .about__left
@@ -105,7 +111,7 @@ block content
                 .contacts-row.contacts__icon
                   +icon(item[0], 'contacts__icon-img')
                 .contacts-row.contacts__title #{item[1]}
-  footer.footer.main__footer
+  footer.main__footer
     .footer__row
       .footer__col
         .footer__text
@@ -131,4 +137,4 @@ block content
           ul.footer-contacts__list
             each item in contacts
               li.footer-contacts__item
-                .footer-contacts__link #{item[1]}
+                .footer-contacts__link.footer__text #{item[1]}
