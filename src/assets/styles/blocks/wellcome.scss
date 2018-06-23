@@ -1,0 +1,64 @@
+.wellcome__hero {
+  min-height: 100vh;
+  //justify-content: center;
+}
+
+.wellcome__hero__header {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 6.25rem;
+  margin-top: 2.8vh;
+}
+
+.hero__btn {
+color: #fff;
+font-size: 1rem;
+font-family: Roboto-Medium;
+padding: 12px 30px;
+background-color: transparent;
+outline: 1px solid #fff;
+}
+
+.wellcome__hero__content {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);  
+}
+
+.wellcome__section-title {
+  background-color: rgba(28, 40, 68, 0.5);
+}
+
+.wellcome__hero__user {
+padding-top: 30px;
+}
+
+.wellcome__socials {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+}
+
+.wellcome__socials_link-icon {
+  fill: rgba(10, 68, 170, 0.7);
+}
+
+.user__btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user__btns__elem {
+  
+  background-color: rgba(4, 72, 189, 0.85);
+  &:hover {
+    background-color: rgba(4, 62, 163, 0.85);
+  }
+}
+
+.user__button {
+  background-color: transparent;
+  padding: 10px 30px;
+  color: #fff;
+}

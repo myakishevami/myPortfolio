@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh;
+  min-height: 50vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,7 @@
 .hero__links {
  // padding: 30px;
   height: 100%;
+ // position: relative;
   //display: flex;
  // align-items: center;
 }
@@ -107,9 +108,9 @@
 }
 
 .triangles__left,
-.triangles__part {
+.triangles__right {
+  //position: absolute;
   width: 50%;
-  
 }
 
 .triangle {

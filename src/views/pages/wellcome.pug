@@ -7,7 +7,7 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  section.hero
+  section.hero.wellcome__hero
     .hero__links
       - 
         var socials = [
@@ -15,23 +15,32 @@ block content
           ['http://gh.com', 'github'],
           ['http://in.com', 'in']
           ]
-      .hero__header
-          ul.socials
-            each item in socials
-              li.socials__item
-                a(href=`${item[0]}`).socials__link
-                  +icon(item[1], 'socials__link-icon')
+      .wellcome__hero__header
+          
           .hero__menu
-           a(href="").hamburger
-              img(src='./assets/images/icons/hamburger.svg', alt = "menu").hamburger-icon
-      .hero__content
+           button.hero__btn Авторизоваться
+              
+      .hero__content.wellcome__hero__content
         .hero__title
-          .section-title
-            .user.hero__user
+          .wellcome__section-title
+            .user.hero__user.wellcome__hero__user
                .user__pic
                   img(src='./assets/images/header_logo.jpg', alt="").user__pic-img
                .user__description
                  .user__name Мякишева Мария
-                 .user__info Личный сайт веб разработчика  
+                 .user__info Личный сайт веб разработчика
+                 ul.socials.wellcome__socials
+                   each item in socials
+                     li.socials__item
+                        a(href=`${item[0]}`).socials__link
+                        +icon(item[1], 'socials__link-icon wellcome__socials_link-icon')
+                 ul.user__btns
+                   li.user__btns__elem
+                     button.user__button Мои работы
+                   li.user__btns__elem
+                     button.user__button Обо мне
+                   li.user__btns__elem
+                     button.user__button Блог
+
 
   
