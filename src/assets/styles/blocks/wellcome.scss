@@ -7,7 +7,7 @@
   display: flex;
   justify-content: flex-end;
   margin-right: 6.25rem;
-  margin-top: 2.8vh;
+  padding-top: 2.8vh;
 }
 
 .hero__btn {
@@ -16,7 +16,9 @@ font-size: 1rem;
 font-family: Roboto-Medium;
 padding: 12px 30px;
 background-color: transparent;
-outline: 1px solid #fff;
+//outline: 1px solid #fff;
+border: 1px solid #fff;
+border-radius: 5px;
 }
 
 .wellcome__hero__content {
@@ -52,6 +54,7 @@ padding-top: 30px;
 .user__btns__elem {
   
   background-color: rgba(4, 72, 189, 0.85);
+  transition: 0.3s;
   &:hover {
     background-color: rgba(4, 62, 163, 0.85);
   }

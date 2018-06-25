@@ -8,14 +8,13 @@ block scripts
 
 block content
   section.hero
-    .hero__links
-      - 
+    - 
         var socials = [
-          ['http://vk.com', 'vk'],
-          ['http://gh.com', 'github'],
-          ['http://in.com', 'in']
+          ['https://vk.com/sotnikova_m', 'vk'],
+          ['https://github.com/myakishevami', 'github'],
+          ['https://www.linkedin.com/in/%D0%BC%D0%B0%D1%80%D0%B8%D1%8F-%D0%BC%D1%8F%D0%BA%D0%B8%D1%88%D0%B5%D0%B2%D0%B0-84148714b/', 'in']
           ]
-      .hero__header
+    .hero__header
           ul.socials
             each item in socials
               li.socials__item
@@ -25,7 +24,7 @@ block content
            a(href="").hamburger
                 +icon('hamburger', 'socials__link-icon')
               
-      .hero__content
+    .hero__content
         .hero__title
           .section-title
             .user.hero__user
@@ -35,8 +34,8 @@ block content
                  .user__name Мария Мякишева
                  .user__info Личный сайт разработчика
 
-        a(href="").down-btn.hero__down-btns
-           +icon('arrow_down', 'hero__down-icon')
+    a(href="#").down-btn.hero__down-btns
+         +icon('arrow_down', 'hero__down-icon')
 
     .about__triangles
       .triangles
@@ -102,16 +101,17 @@ block content
             ul.contacts__list
               - 
                 var contacts = [
-                  ['skype', 'smi.tomsk'],
-                  ['phone', '+7 983 302 3806'],
-                  ['envelope_n', 'smi.tomsk@gmail.com'],
-                  ['map_n', 'Новосибирск, ул. Лебедевского, д. 2/2']
+                  ['skype', 'smi.tomsk', 'skype:Smi.tomsk'],
+                  ['phone', '+7 983 302 3806', 'tel:+79833023806'],
+                  ['envelope_n', 'smi.tomsk@gmail.com', 'mailto:smi.tomsk@gmail.com'],
+                  ['map_n', 'Новосибирск, ул. Лебедевского, д. 2/2', 'https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9B%D0%B5%D0%B1%D0%B5%D0%B4%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE,+2%2F2,+%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA,+%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+630123/@55.081945,82.9223351,17z/data=!3m1!4b1!4m5!3m4!1s0x42dfe514adce78fd:0xb716094ebd6c386e!8m2!3d55.081945!4d82.924529?hl=ru-RU']
                 ]
               each item in contacts
                 li.contacts__item
-                  .contacts-row.contacts__icon
-                    +icon(item[0], 'contacts__icon-img')
-                  .contacts-row.contacts__title #{item[1]}
+                  a(href=`${item[2]}`).contacts__item-link
+                    .contacts-row.contacts__icon
+                      +icon(item[0], 'contacts__icon-img')
+                    .contacts-row.contacts__main #{item[1]}
   footer.main__footer
     .footer__row
       .footer__col

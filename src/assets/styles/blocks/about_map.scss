@@ -32,6 +32,10 @@ display: flex;
   align-items: center;
 }
 
+.contacts__item-link {
+  display: flex;
+}
+
 .contacts-row {
   font-size: 16px;
   display: flex;
@@ -55,4 +59,12 @@ display: flex;
   flex-wrap: wrap;
   width: 540px;
   height: 140px;
+}
+
+.contacts__main {
+ color: rgba(71, 75, 87, 0.8); 
+ font-family: Roboto-Medium;
+ &:hover {
+  color: #004cd1;
+ }
 }
