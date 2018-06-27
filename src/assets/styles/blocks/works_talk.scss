@@ -1,0 +1,47 @@
+.talk {
+  background: url(./assets/images/fon_works.png) center center no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.talk__title {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 1.875rem 0 1.25rem 0;
+}
+
+.talk-block-title {
+  width: 25vw;
+  color: #fff;
+}
+
+  
+.reviews__list {
+  display: flex;
+  justify-content: center;
+}
+
+.reviews__elem {
+  padding: 20px;
+  max-width: 23.75rem;
+  text-align: center;
+  background-image: url('./assets/images/quotes.png'), url('./assets/images/quotes.png');
+  background-repeat: no-repeat;
+  background-position-y: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.reviews__elem-img {
+ border-radius: 50%;
+ width: 4.875rem;
+ height: 4.875rem;
+}
+
+.reviews__elem-text {
+  padding: 30px 0;
+  font-family: Roboto
+}
