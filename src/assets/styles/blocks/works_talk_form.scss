@@ -1,0 +1,59 @@
+.talk__form {
+  display: flex;
+  justify-content: center;
+}
+
+.talk__about {
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7.8rem;
+  width: 33vw;
+}
+
+.talk__about-elem {
+  
+}
+
+.talk__button{
+  display: flex;
+}
+
+.talk__about-tittle {
+  font-family: Sansus-Webissimo-Regular;
+  font-size: 35px;
+  color: #fff;
+  padding-top: 50px;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.talk__about-main {
+  padding: 20px;
+}
+
+.talk__about-color {
+  background-color: rgba(255, 255, 255, 0.07);
+  border: none;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.talk__about-button {
+  padding: 15px 50px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.07);
+  font-family: Roboto-Regular;
+  font-size: 1rem;
+  &:hover {
+    background-color: #004cd1;
+    color: #fff;
+  }
+}
+
+.talk-message__text {
+  height: 130px;
+}

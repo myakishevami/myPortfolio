@@ -2,7 +2,8 @@
   background: url(./assets/images/fon_works.png) center center no-repeat;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  padding-bottom: 20vh;
+ // height: 100vh;
 }
 
 .talk__title {
@@ -43,5 +44,10 @@
 
 .reviews__elem-text {
   padding: 30px 0;
-  font-family: Roboto
+  font-family: Roboto-Italic;
+}
+
+.reviews__elem-author-name {
+  padding: 30px 0;
+  font-family: Roboto-BoldItalic;
 }
