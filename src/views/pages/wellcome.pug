@@ -1,46 +1,64 @@
-extends ../main.layout.pug
+//extends ../main.layout.pug
+include ../common/_mixins
+
+script(src='bootloader.bundle.js')
+script(src='vendor.bundle.js')
+script(src='auth.bundle.js')
 
 block variables
   - var title = 'Обо мне'
 
 block scripts
-  script(src='about.bundle.js')
+  script(src='auth.bundle.js')
 
-block content
-  section.hero.wellcome__hero
-    .hero__links
-      - 
-        var socials = [
-          ['http://vk.com', 'vk'],
-          ['http://gh.com', 'github'],
-          ['http://in.com', 'in']
-          ]
-      .wellcome__hero__header
-          
-          .hero__menu
-           button.hero__btn Авторизоваться
-              
-      .hero__content.wellcome__hero__content
-        .hero__title
-          .wellcome__section-title
-            .user.hero__user.wellcome__hero__user
-               .user__pic
-                  img(src='./assets/images/header_logo.jpg', alt="").user__pic-img
-               .user__description
-                 .user__name Мякишева Мария
-                 .user__info Личный сайт веб разработчика
-                 ul.socials.wellcome__socials
-                   each item in socials
-                     li.socials__item
-                        a(href=`${item[0]}`).socials__link
-                        +icon(item[1], 'socials__link-icon wellcome__socials_link-icon')
-                 ul.user__btns
-                   li.user__btns__elem
-                     button.user__button Мои работы
-                   li.user__btns__elem
-                     button.user__button Обо мне
-                   li.user__btns__elem
-                     button.user__button Блог
-
-
-  
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    
+    title Portfolio | #{title}
+    link(rel='stylesheet' href='main.min.css')
+body
+    .wrapper
+      .maincontent
+        block content
+          section.wellcome__hero
+           .parallax
+            .parallax__layer  
+              img(src='./assets/images/fon_night.png', alt="1").parallax__image
+            
+              - 
+                var socials = [
+                  ['http://vk.com', 'vk'],
+                  ['http://gh.com', 'github'],
+                  ['http://in.com', 'in']
+                  ]
+            .parallax__content  
+              .wellcome__hero__header
+                  
+                  .hero__menu
+                  button.hero__btn Авторизоваться
+                      
+              .hero__content.wellcome__hero__content
+                .hero__title
+                  .wellcome__section-title
+                    .user.hero__user.wellcome__hero__user
+                      .user__pic
+                          img(src='./assets/images/header_logo.jpg', alt="").user__pic-img
+                      .user__description
+                        .user__name Мякишева Мария
+                        .user__info Личный сайт веб разработчика
+                        ul.socials.wellcome__socials
+                          each item in socials
+                            li.socials__item
+                                a(href=`${item[0]}`).socials__link
+                                +icon(item[1], 'socials__link-icon wellcome__socials_link-icon')
+                        ul.user__btns
+                          li.user__btns__elem
+                            button.user__button Мои работы
+                          li.user__btns__elem
+                            button.user__button Обо мне
+                          li.user__btns__elem
+                            button.user__button Блог

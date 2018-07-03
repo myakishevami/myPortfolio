@@ -1,1 +1,1 @@
-webpackJsonp([4],{3:function(c,n,s){"use strict"}},[3]);
+webpackJsonp([4],{9:function(e,n,o){"use strict";document.querySelector(".parallax").children;window.addEventListener("mousemove",function(e){console.log(e)})}},[9]);
