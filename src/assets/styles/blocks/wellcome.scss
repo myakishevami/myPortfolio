@@ -12,7 +12,7 @@
   //height: 100vh;
 }*/
 
-.parralax {
+.parallax {
   position: fixed;
   //position: relative;
   top: 0;
@@ -22,7 +22,7 @@
   background: #223b65;
 }
 
-.parralax__layer {
+.parallax__layer {
   position: absolute;
   top: 0;
   left: 0;
@@ -30,7 +30,7 @@
   height: 100%;
 }
 
-.parralax__image {
+.parallax__image {
   position: absolute;
   bottom: 0;
   left: 50%;
