@@ -9,7 +9,7 @@ const skill = {
   methods: {
     drawCircle() {
       const circle = this.$refs["color-circle"];
-      console.log(circle);
+      //console.log(circle);
       const dashOffset = parseInt(
         getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
       );
@@ -24,6 +24,7 @@ const skill = {
     this.drawCircle();
   }
 };
+
 
 
 const skillsRow = {
@@ -45,7 +46,7 @@ new Vue({
     skills: {}
   },
   created() {
-    const data = require('../../../data/skills.json');
+    const data = require("../../../data/skills.json");
     this.skills = data;
   },
   template: "#skills-list"

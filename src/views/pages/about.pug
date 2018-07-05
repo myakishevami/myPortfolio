@@ -3,9 +3,6 @@ extends ../main.layout.pug
 block variables
   - var title = 'Обо мне'
 
-block scripts
-  script(src='about.bundle.js')
-
 block content
   section.hero
     - 
@@ -121,3 +118,25 @@ block content
             each item in contacts
               li.footer-contacts__item
                 .footer-contacts__link.footer__text #{item[1]}
+  .hamburger-popups
+    .hamburger-popups__content
+      .hamburger-popups__content-header
+        a(href="#").hamburger-popups__close
+          svg.hamburger-popups__close-img
+            line(x1="1" y1="31" x2="31" y2="1" stroke="white" stroke-width="4")
+            line(x1="1" y1="1" x2="31" y2="31" stroke="white" stroke-width="4")
+      ul.hamburger-popups__list
+        nav.nav__hamburger 
+          ul.nav__list__hamburger
+            li.nav__item__hamburger
+              a(href="#").nav__link__hamburger Мои работы
+            li.nav__item__hamburger
+              a(href="#").nav__link__hamburger Блог
+            li.nav__item__hamburger
+              a(href="#").nav__link__hamburger Обо мне
+            li.nav__item__hamburger
+              a(href="#").nav__link__hamburger Авторизация  
+
+block scripts
+  script(src='about.bundle.js')
+

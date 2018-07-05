@@ -3,13 +3,11 @@ include ../common/_mixins
 
 script(src='bootloader.bundle.js')
 script(src='vendor.bundle.js')
-script(src='auth.bundle.js')
 
 block variables
   - var title = 'Обо мне'
 
-block scripts
-  script(src='auth.bundle.js')
+
 
 doctype html
 html(lang="ru")
@@ -35,13 +33,13 @@ body
                   ['http://gh.com', 'github'],
                   ['http://in.com', 'in']
                   ]
-            .parallax__content  
-              .wellcome__hero__header
+         
+          .wellcome__hero__header
                   
                   .hero__menu
                   button.hero__btn Авторизоваться
                       
-              .hero__content.wellcome__hero__content
+          .hero__content.wellcome__hero__content
                 .hero__title
                   .wellcome__section-title
                     .user.hero__user.wellcome__hero__user
@@ -62,3 +60,6 @@ body
                             button.user__button Обо мне
                           li.user__btns__elem
                             button.user__button Блог
+
+block scripts
+  script(src='auth.bundle.js')
