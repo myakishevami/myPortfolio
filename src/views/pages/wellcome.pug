@@ -55,11 +55,14 @@ body
                                 +icon(item[1], 'socials__link-icon wellcome__socials_link-icon')
                         ul.user__btns
                           li.user__btns__elem
-                            button.user__button Мои работы
+                            button.user__button 
+                              a(href="./works.html").user__button-href Мои работы
                           li.user__btns__elem
-                            button.user__button Обо мне
+                            button.user__button
+                              a(href="./about.html").user__button-href Обо мне
                           li.user__btns__elem
-                            button.user__button Блог
+                            button.user__button
+                              a(href="./blog.html").user__button-href Блог
 
 block scripts
   script(src='auth.bundle.js')
