@@ -1,0 +1,30 @@
+.hero__down__work-btns {
+  bottom: 30%;
+}
+
+.triangles__work {
+  fill: rgba(21, 24, 40, 0.85);
+}
+
+.work__triangles {
+  bottom: 180px;
+}
+
+.works__bottom {
+  background-color: rgba(21, 24, 40, 0.85);
+  position: absolute;
+  bottom: 0;
+  height: 180px;
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+}
+
+.block-title__work {
+  text-transform: uppercase;
+  color: #fff;
+  //position: absolute;
+  padding: 1rem 0;
+  //transform: translateY(-50%);
+}

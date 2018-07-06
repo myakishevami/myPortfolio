@@ -34,25 +34,23 @@ block content
                  .user__name Мария Мякишева
                  .user__info Личный сайт разработчика
 
-    a(href="#").down-btn.hero__down-btns
+    a(href="#").down-btn.hero__down-btns.hero__down__work-btns
          +icon('arrow_down', 'hero__down-icon')
 
-    .about__triangles
+    .about__triangles.work__triangles
       .triangles
         .triangles__left
-          svg(viewbox = "0 0 900 180" preserveAspectRatio = "none").triangle.triangle__left
-            polygon(points = "0 0, 0 180, 900 180")
+          svg(viewbox = "0 0 900 360" preserveAspectRatio = "none").triangle.triangle__left.triangles__work
+            polygon(points = "0 0, 0 360, 900 360")
         .triangles__right  
-          svg(viewbox = "0 0 900 180" preserveAspectRatio = "none").triangle.triangle__right
-            polygon(points = "900 0, 900 180, 0 180")
+          svg(viewbox = "0 0 900 360" preserveAspectRatio = "none").triangle.triangle__right.triangles__work
+            polygon(points = "900 0, 900 360, 0 360")
+    .works__bottom
+      .block-title.block-title__work мои работы       
 
-  section.about
-    .about__left.works__left
-      .block-title.works__block-title САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
-      .about__left-content
-          
-    .about__right
-            
+  section.works__container
+    #slider-component
+    
   section.talk
     .talk__title
       .block-title.talk-block-title Что обо мне говорят
@@ -127,3 +125,5 @@ block content
                 each item in contacts
                   li.footer-contacts__item
                    .footer-contacts__link.footer__text #{item[1]}
+block scripts
+  script(src='works.bundle.js')
