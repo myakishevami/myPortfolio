@@ -49,6 +49,8 @@ block content
       .about__left-main
         .about__left-title
           .block-title Обо мне
+          .block-pic
+             img(src='./assets/images/stars2.png', alt="").block-pic__img
         .about__left-content
           .user-description
             .user-description__image
@@ -58,6 +60,7 @@ block content
                 .block-subtitle Кто я 
               .user-description__text.text-content
                 p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                br
                 p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
     .about__right
       
@@ -70,7 +73,7 @@ block content
           #skills-container
           
   section.map
-    .google-map
+    #google-map
     .map__container
       .map__data
         .contacts
@@ -139,4 +142,5 @@ block content
 
 block scripts
   script(src='about.bundle.js')
+  
 

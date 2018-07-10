@@ -1,20 +1,40 @@
 .blog__about__left {
   width: 30vw;
+  margin-top: 10vh;
+  transition: 0.3s;
+  @include tablets {
+    left: -100%;
+    position: absolute;
+  }
+  @include phones {
+    background: #253468;
+    position: absolute;
+    width: 80%;
+    left: -80%;
+    height: 100%;
+    z-index: 55;
+    margin-top: 0;
+  }
+}
+
+.blog__about__left__active {
+  left: 0;
 }
 
 .blog__left-main {
  // width: 300px;
-  margin: 4.375rem 3.125rem 0 6.25rem;
+  margin: 0 3.125rem 0 6.25rem;
 }
 
 .blog__about__left-title {
 padding-right: 0;
+display: block;
 }
 
 .blog__about__left-title {
   margin-bottom: 2.5rem;
   &:hover {   //изменить на active + вешается активный признак при переходе на статью
-    padding-right: 15px;
+    //padding-right: 15px;
     border-right: #083c96 2px solid;
   } 
   
@@ -31,15 +51,38 @@ padding-right: 0;
    }
 }
 
+.blog__about__left-btn {
+  display: none;
+  @include phones {
+    display: block;
+    position: absolute;
+    background: #253468;
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    right: -1.25rem;
+    //top: 10%;
+    z-index: 55;
+  }
+}
+
 .blog__about__right {
   width: 70vw;
+  margin-top: 10vh;
+  @include tablets {
+    width: 100%;
+    padding: 0 3%;
+  }
+  @include phones {
+    
+  }
 }
 
 .blog__right-main {
   //display: flex;
   //flex-direction: column;
   //justify-content: flex-start;
-  margin: 70px 0 0 0;
+  margin-bottom: 23vh;
 
 }
 

@@ -1,14 +1,37 @@
 
 .about {
-  background-color: #f2f0e8;
+  //background-color: #f2f0e8;
  // min-height: 100vw;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  @include tablets {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+   // padding: 0 20vw;
+
+  }
+}
+
+.about__left {
+  background-color: #f2f0e8;
+ 
+}
+.about__right {
+background-color: #f4f5f0;
+
 }
 
 .about__right,
 .about__left {
   width: 50vw;
+  padding-bottom: 25px;
+  @include tablets {
+    width: 100%;
+    text-align: center;
+    padding: 0 20vw 50px 20vw;
+  }
 }
 
 .block-title {
@@ -16,18 +39,55 @@
   color: #474b57;
   text-align: center;
   font-family: Sansus-Webissimo-Regular;
-  background: url('./assets/images/stars2.png') center center no-repeat;
+  //background: url('./assets/images/stars2.png') center center no-repeat;
+}
+
+.block-pic {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  @include note {
+    top: -20%;
+    transform: translate(-50%, 0);
+  }
+
+  @include tablets {
+    top: 0;
+  }
+
+  
+
+  &__img {
+    width: 90%;
+    height: 90%;
+    max-height: 7.875rem;
+  }
 }
 
 .about__left-main {
   width: 50vw;
   display: flex;
-  padding-right: 1.5vw;
+  padding: 0 2.5vw;
+  @include note {
+    flex-flow: column;
+  }
+  @include tablets {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
 }
 
 .about__left-title {
   width: 100%;
+  height: 100%;
+  position: relative;
   padding-right: 1.5vw;
+  padding-bottom: 1rem;
+  @include tablets {
+    padding: 1.5rem;
+  }
 }
 
 .about__left-content {
@@ -35,7 +95,11 @@
 }
 
 .user-description__avatar {
+  max-width: 28rem;
+  max-height: 25rem;
+  overflow: hidden;
   width: 100%;
+  height: 100%;
  // height: 390px;
 }
 
@@ -43,10 +107,15 @@
 
 .about__right-main {
   width: 50vw;
+  padding: 0 2.5vw;
+  @include tablets {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .about__right-description {
-  padding-bottom: 50px;
+  //padding-bottom: 50px;
 }
 
 .skill {
@@ -85,12 +154,19 @@
 
 .skills-row__list {
   display: flex;
+  @include tablets {
+  justify-content: space-around;
+  }
 }
 
 .skills-row__title {
   color: #474b57;
   font-size: 1.75rem;
   font-family: Roboto-Medium;
+}
+
+.skills-list__item {
+  padding-top: 40px;
 }
 
 .skill__title {
@@ -114,7 +190,7 @@ transform: translate(-50%, -50%);
 
 .block-subtitle {
  padding-bottom: 1.875rem;
- width: 35%;
+ width: 50%;
  text-align: center;
  margin: 0 auto;
   color: #474b57;
@@ -122,4 +198,14 @@ transform: translate(-50%, -50%);
   border-bottom: #474b57 4px solid;
   margin-bottom: 1.875rem;
   font-family: Sansus-Webissimo-Regular;
+  @include tablets {
+    width: 100%;
+    padding-top: 1.875rem;
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+}
+
+.text-content {
+  text-align: left;
 }
