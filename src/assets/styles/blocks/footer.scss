@@ -37,6 +37,15 @@
     "forth third" 51%
     /1fr 1fr;
   }
+  @include phones {
+        grid-template: 
+    "first" 21%
+    "second" 11%
+    "third" 14%
+    "forth" 54%
+    /1fr;
+  }
+
   width: 100vw;
   color: #fff;
   z-index: 5;

@@ -5,6 +5,9 @@
   left: 0;
   right: 0;
   bottom: 0;
+  @include phones {
+    grid-area: second;
+  }
 }
 
 .map {
@@ -12,7 +15,14 @@
   height: 100vh;
   position: relative;
   
-  background: url('./assets/images/map.png') center center no-repeat;
+  //background: url('./assets/images/map.png') center center no-repeat;
+  @include phones {
+    display: grid;
+    grid-template: 
+    "first" 50%
+    "second" 50%
+    /1fr;
+  }
 }
 
 .map__container {
@@ -21,6 +31,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   //padding-bottom: 257px;
+  @include phones {
+    grid-area: first;
+    top: 50%;
+  }
 }
 
 .contacts {
