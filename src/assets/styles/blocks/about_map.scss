@@ -6,7 +6,10 @@
   right: 0;
   bottom: 0;
   @include phones {
-    grid-area: second;
+    position: relative;
+    height: 53.25rem;
+   //z-index: 20;
+    //grid-area: second;
   }
 }
 
@@ -17,11 +20,15 @@
   
   //background: url('./assets/images/map.png') center center no-repeat;
   @include phones {
-    display: grid;
-    grid-template: 
-    "first" 50%
-    "second" 50%
-    /1fr;
+    //display: grid;
+    //grid-template: 
+   // "first" 50%
+   // "second" 50%
+   // /1fr;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
@@ -30,10 +37,16 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 20;
   //padding-bottom: 257px;
   @include phones {
-    grid-area: first;
-    top: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    //grid-area: first;
+    //top: 50%;
+    transform: translate(0, 0);
+    z-index: 0;
   }
 }
 
@@ -47,6 +60,14 @@
     height: 100%;
     padding: 0 40px 30px 20px;
   }
+  @include phones {
+    padding: 0 2.5rem 1.75rem;
+    width: 100%;
+  }
+}
+
+.block-subtitle__footer {
+  text-transform: uppercase;
 }
 
 .contacts__item {

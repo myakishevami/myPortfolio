@@ -24,6 +24,10 @@
 .blog__left-main {
  // width: 300px;
   margin: 0 3.125rem 0 6.25rem;
+  @include phones {
+    margin: 3.75rem 1rem 0 1rem;
+    text-align: right;
+  }
 }
 
 .blog__about__left-title {
@@ -33,22 +37,37 @@ display: block;
 
 .blog__about__left-title {
   margin-bottom: 2.5rem;
+  padding-right: 1px;
   &:hover {   //изменить на active + вешается активный признак при переходе на статью
-    //padding-right: 15px;
+    color: #083c96;
+    
     border-right: #083c96 2px solid;
   } 
+
+  @include phones {
+    color: #fff;
+    &:hover {
+      font-weight: bold;
+      //color: #fff;
+      border-right: none;
+    }
   
+}
 }
 
 .blog__about__left-part {
   color: #455a64;
   font-size: 16px;
   font-family: Roboto-Regular;
-
- &:hover {   //изменить на active + вешается активный признак при переходе на статью
-   color: #083c96;
-   font-weight: bold;
-   }
+  &:hover {
+    color: #083c96;
+  }
+  @include phones {
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
 }
 
 .blog__about__left-btn {
@@ -71,7 +90,7 @@ display: block;
   margin-top: 10vh;
   @include tablets {
     width: 100%;
-    padding: 0 3%;
+    padding: 0 4%;
   }
   @include phones {
     
@@ -83,6 +102,9 @@ display: block;
   //flex-direction: column;
   //justify-content: flex-start;
   margin-bottom: 23vh;
+  @include phones {
+    margin-bottom: 40vh;
+  }
 
 }
 

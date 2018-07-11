@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
           // Уровень масштабирования. Допустимые значения:
           // от 0 (весь мир) до 19.
           zoom: 11
-      }),
+      });
+    };
+});
        // Создаём макет содержимого.
-       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
-
+      // MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+     //   '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+   // )
+/*
     myPlacemark = new ymaps.Placemark([55.081988, 82.924562], {
         hintContent: 'Собственный значок метки',
         balloonContent: 'Это красивая метка'
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     myMap.geoObjects
     .add(myPlacemark);
 
-    myMap.behaviors.disable('scrollZoom');
-  }
+    myMap.behaviors.disable('scrollZoom');*/
+ // }
 
-});
+//});

@@ -22,47 +22,73 @@
   position: absolute;
  // top: 90%;
   bottom: 0;
-  height: 23vh;
+  //height: 23vh;
   margin-top: -23vh;
   //margin: 0 auto;
-  display: grid;
-  grid-template: 
-  "first second third" 50%
-  "first fifth third" 50%
-  /1fr 1fr 1fr;
-  @include tablets {
-    grid-template: 
-    "first first" 27%
-    "second third" 22%
-    "forth third" 51%
-    /1fr 1fr;
-  }
-  @include phones {
-        grid-template: 
-    "first" 21%
-    "second" 11%
-    "third" 14%
-    "forth" 54%
-    /1fr;
-  }
-
   width: 100vw;
   color: #fff;
   z-index: 5;
+  display: flex;
+  @include tablets {
+    flex-wrap: wrap;
+    //height: 26vh;
+    justify-content: space-between;
+  }
+  @include phones {
+    display: inline;
+    height: 22rem;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .footer__row {
-  //  width: 33%;
+  width: 33%;
   padding: 2.7vh 1.1vw 5.3vh 1.1vw;
+  &-first {
+    @include tablets {
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      border-bottom: 1px solid;
+    }
+    @include phones {
+      padding: 1rem 0 0;
+    }
+  }
+  &-second {
+    @include tablets {
+      width: 50%;
+      padding: 1rem 0 1rem 1.7rem;
+      margin-bottom: 2rem;
+    }
+    @include phones {
+      width: 90%;
+      padding: 0 1 rem;
+      text-align: center;
+      margin: 0;
+      //height: 100%;
+    }
+  }
+  &-third {
+    @include tablets {
+      width: 50%;
+      padding: 1rem 1.7rem 1rem 0;
+    }
+    @include phones {
+      width: 100%;
+      padding: 0 1rem;
+    }
+  }
 }
 
 .menu__list {
   display: flex;
   padding-bottom: 2.3vh;
-  grid-area: 1 /2 / 2 / 3;
-  @include tablets {
-    grid-area: 2 /1 / 3 / 2;
+  @include phones {
+    justify-content: space-between;
   }
+  
 }
 
 .menu__item {
@@ -73,9 +99,9 @@
   color: #fff;
   font-family: Roboto-Bold;
   font-size: 1rem;
-  
-  //width: 100%;
-  //opacity: 0.5;
+  @include tablets {
+    font-size: 0.875rem;
+  }
 }
 
 .socials__link-icon-opacity {
@@ -85,22 +111,27 @@
 .footer__text {
   font-family: Roboto Light;
   font-size: 1rem;
-  grid-area: 1 / 1 / 3 / 2;
   @include tablets {
-    grid-area: 1 / 1 / 2 / 3;
+    font-size: 0.875rem;
   }
+
 }
 
 .footer-contacts__list {
-  grid-area: 1 / 3 / 3 / 4;
   @include tablets {
-    grid-area: 2 / 2 / 4 / 3;
+    text-align: right;
+  }
+  @include phones {
+    text-align: center;
   }
 }
 
 .socials {
-   grid-area: 2 / 2 / 3 / 3;
-  @include tablets {
-    grid-area: 3 / 1 / 4 / 2;
+   
+}
+
+.socials-footer {
+  @include phones {
+  justify-content: center;
   }
 }

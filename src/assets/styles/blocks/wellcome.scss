@@ -51,6 +51,10 @@
   //justify-content: flex-end;
   margin-right: 6.25rem;
   padding-top: 2.8vh;
+  @include phones {
+    margin-right: 50%;
+    transform: translateX(50%);
+  }
 }
 
 .hero__btn {

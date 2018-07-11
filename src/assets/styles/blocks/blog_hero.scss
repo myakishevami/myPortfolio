@@ -1,0 +1,7 @@
+.hero__down-btns-blog {
+  display: none;
+  @include tablets {
+    display: inline-block;
+  }
+  
+}

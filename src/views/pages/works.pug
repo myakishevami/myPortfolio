@@ -53,7 +53,7 @@ block content
     
   section.talk
     .talk__title
-      .block-title.talk-block-title Что обо мне говорят
+      .block-title.talk-block-title.block-title__work Что обо мне говорят
     .talk__reviews
       ul.reviews__list
         li.reviews__elem
@@ -88,15 +88,15 @@ block content
           button.talk__about-button.talk__about-color Отправить
           button.talk__about-button.talk__about-color Очистить
 
-    a(href="#").down-btn.hero__down-btns
+    a(href="#").down-btn.hero__down-btns.hero__down-btns-works
       +icon('arrow_down', 'hero__down-icon')
 
-    footer.main__footer
-        .footer__row
+  footer.main__footer
+        .footer__row.footer__row-first
           .footer__col
             .footer__text
               p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-        .footer__row
+        .footer__row.footer__row-second
           .footer__col
             nav.menu
               ul.menu__list
@@ -105,13 +105,13 @@ block content
                     a(href=`${item[1]}`).menu__link #{item[0]} 
 
           .footer__col.footer__col_justify_end
-            ul.socials
+            ul.socials.socials-footer
                 each item in socials
                   li.socials__item
                     a(href=`${item[0]}`).socials__link
                       +icon(item[1], 'socials__link-icon socials__link-icon-opacity')
 
-        .footer__row
+        .footer__row.footer__row-third
           - 
                 var contacts = [
                   ['skype', 'smi.tomsk', 'skype:Smi.tomsk'],

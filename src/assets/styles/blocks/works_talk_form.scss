@@ -1,6 +1,7 @@
 .talk__form {
   display: flex;
   justify-content: center;
+  margin-bottom: 23vh;
 }
 
 .talk__about {
@@ -11,6 +12,9 @@
   align-items: center;
   margin-bottom: 7.8rem;
   width: 33vw;
+  @include tablets {
+    width: 50vw;
+  }
 }
 
 .talk__about-elem {
@@ -19,6 +23,7 @@
 
 .talk__button{
   display: flex;
+  width: 100%;
 }
 
 .talk__about-tittle {
@@ -27,6 +32,11 @@
   color: #fff;
   padding-top: 50px;
   border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  text-align: center;
+  @include tablets {
+    font-size: 30px;
+  }
 }
 
 .talk__about-main {
@@ -40,14 +50,22 @@
   height: 45px;
   margin-bottom: 20px;
   border-radius: 2px;
+  color: #fff;
+}
+
+.talk__button{
+  display: flex;
+  width: 100%;
 }
 
 .talk__about-button {
-  padding: 15px 50px;
+  //padding: 15px 50px;
+  text-align: center;
   transition: 0.3s;
   color: rgba(255, 255, 255, 0.07);
   font-family: Roboto-Regular;
   font-size: 1rem;
+  width: 50%;
   &:hover {
     background-color: #004cd1;
     color: #fff;
@@ -56,4 +74,9 @@
 
 .talk-message__text {
   height: 130px;
+}
+
+.hero__down-btns-works {
+  transform: rotate(-180deg);
+  bottom: 25vh;
 }
