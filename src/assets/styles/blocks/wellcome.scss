@@ -30,6 +30,10 @@
 .wellcome__hero-video {
   //z-index: 10;
   position: absolute;
+  @include tablets {
+    display: none;
+  }
+
 }
 
 .parallax__layer {
