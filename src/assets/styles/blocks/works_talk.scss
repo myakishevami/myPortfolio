@@ -18,12 +18,19 @@
 .talk-block-title {
   width: 33vw;
   color: #fff;
+  @include phones {
+    width: 60vw;
+  }
 }
 
   
 .reviews__list {
   display: flex;
   justify-content: center;
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .reviews__elem {

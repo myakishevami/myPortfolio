@@ -2,6 +2,9 @@
   display: flex;
   justify-content: center;
   margin-bottom: 23vh;
+  @include phones {
+    margin-bottom: 50vh;
+  }
 }
 
 .talk__about {
@@ -14,6 +17,10 @@
   width: 33vw;
   @include tablets {
     width: 50vw;
+  }
+  @include phones {
+    width: 90%;
+    margin: 0 10px 7.8rem 10px;
   }
 }
 
@@ -79,4 +86,10 @@
 .hero__down-btns-works {
   transform: rotate(-180deg);
   bottom: 25vh;
+  @include tablets {
+    bottom: 32vh;
+  }
+  @include phones {
+    bottom: 50vh;
+  }
 }
