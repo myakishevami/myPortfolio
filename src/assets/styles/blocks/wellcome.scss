@@ -94,8 +94,26 @@ border-radius: 5px;
   background-color: rgba(28, 40, 68, 0.5);
 }
 
+.wellcome__section-title-main {
+  background-color: rgba(28, 40, 68, 0.5);
+}
+
+.wellcome__section-non-active {
+  display: none;
+}
+
+.wellcome__section-auth {
+  background-color: rgba(28, 40, 68, 0.5);
+}
+
 .wellcome__hero__user {
 padding-top: 30px;
+}
+
+.block-title__wellcome {
+  font-size: 2.1875rem;
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .wellcome__socials {
@@ -113,9 +131,26 @@ padding-top: 30px;
   justify-content: space-between;
 }
 
+.user__btns-auth {
+  width: 50%;
+  height: 100%;
+  align-items: center;
+}
+
+.user__button-auth {
+  background-color: transparent;
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+  //text-align: center;
+&-href {
+  color: #fff;
+}
+}
+
 .user__btns__elem {
   
-  background-color: rgba(4, 72, 189, 0.85);
+  background-color: rgba(82, 90, 103, 0.85);
   transition: 0.3s;
   &:hover {
     background-color: rgba(4, 62, 163, 0.85);
@@ -146,3 +181,90 @@ padding-top: 30px;
   width: 100%;
 }
 
+.socials_form_wellcome {
+  width: 20px;
+  height: 20px;
+  fill: #818181;
+ // background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
+}
+
+.wellcome_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.talk-name__btn-desc, .talk__about-quest {
+  color: #fff;
+  font-family: Roboto-Regular;
+  font-size: 1rem;
+}
+
+.talk__about_wellcome-elem-center {
+  justify-content: center;
+}
+
+.talk__about_wellcome-elem {
+  display: flex;
+  padding: 20px 20px;
+}
+
+.talk__about-quest {
+  display: flex;
+  justify-content: center;
+}
+
+.talk-name__text {
+  height: 45px;
+  width: 100%;
+  border: #fff 1px solid;
+
+  &:focus {
+    border: #083c96 1px solid;
+    .socials_form_wellcome {
+      fill: #083c96;
+    }
+  }
+}
+
+.talk__about-icon {
+  width: 45px;
+  height: 45px;
+  background: #f0efe9;
+  border: #f0efe9 1px solid;
+}
+
+.talk__about_radio {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wellcome__section-main {
+  height: 100%;
+}
+
+.flip-enter-active, .flip-leave-active {
+  transition: 1s linear;
+}
+
+.wellcome__hero__title {
+  perspective: 1000px;
+}
+
+.flip-leave {
+  transform: rotateY(0);
+}
+
+.flip-leave-to {
+  transform: rotateY(90deg);
+}
+
+.flip-enter {
+  transform: rotateY(-90deg);
+}
+
+.flip-enter-to {
+  transform: rotateY(0deg);
+}

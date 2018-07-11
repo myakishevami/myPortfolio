@@ -17,3 +17,5 @@ const moveLayers = e => {
 
 window.addEventListener("mousemove", moveLayers);
 
+import "./modules/main_btn";
+

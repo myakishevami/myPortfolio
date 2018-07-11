@@ -19,6 +19,9 @@ html(lang="ru")
     title Portfolio | #{title}
     link(rel='stylesheet' href='main.min.css')
 body
+ #animation-root
+
+ script(type="text/x-template")#animation
     .wrapper
       .maincontent
         block content
@@ -39,11 +42,43 @@ body
           .wellcome__hero__header
                   
                   .hero__menu
-                  button.hero__btn Авторизоваться
+                  button(@click="switchComponents").hero__btn Авторизоваться
                       
           .hero__content.wellcome__hero__content
-                .hero__title
-                  .wellcome__section-title
+                .hero__title.wellcome__hero__title
+                    .wellcome__section-title-main
+                      .user.hero__user.wellcome__hero__user
+                        .user__pic
+                            img(src='./assets/images/header_logo.jpg', alt="").user__pic-img
+                        .user__description
+                          .user__name Мякишева Мария
+                          .user__info Личный сайт веб разработчика
+                          ul.socials.wellcome__socials
+                            each item in socials
+                              li.socials__item
+                                  a(href=`${item[0]}`).socials__link
+                                  +icon(item[1], 'socials__link-icon wellcome__socials_link-icon')
+                          ul.user__btns
+                            li.user__btns__elem
+                              button.user__button 
+                                a(href="./works.html").user__button-href Мои работы
+                            li.user__btns__elem
+                              button.user__button
+                                a(href="./about.html").user__button-href Обо мне
+                            li.user__btns__elem
+                              button.user__button
+                                a(href="./blog.html").user__button-href Блог
+                    transition(name="flip" mode="out-in")
+                      component(:is="compToShow")
+                  
+                                      
+      footer.wellcome__footer
+        h2 © Мякишева Мария | Создано с любовью в LoftSchool | 2018;
+
+block scripts
+  script(src='auth.bundle.js')
+  script(type="text/x-template")#compA
+        .wellcome__section-title
                     .user.hero__user.wellcome__hero__user
                       .user__pic
                           img(src='./assets/images/header_logo.jpg', alt="").user__pic-img
@@ -65,8 +100,37 @@ body
                           li.user__btns__elem
                             button.user__button
                               a(href="./blog.html").user__button-href Блог
-      footer.wellcome__footer
-        h2 © Мякишева Мария | Создано с любовью в LoftSchool | 2018;
 
-block scripts
-  script(src='auth.bundle.js')
+  script(type="text/x-template")#compB
+        .wellcome__section-auth
+                    .user.hero__user.wellcome__hero__user
+                        .block-title.block-title__wellcome Авторизуйтесь
+                        .wellcome_form
+                          label.talk__about-elem.talk__about_wellcome-elem
+                             .talk__about-icon
+                               +icon('login', 'socials_form_wellcome')
+                             input(type="text", placeholder="Логин", name="user-name").talk-name__text
+                          label.talk__about-elem.talk__about_wellcome-elem 
+                             .talk__about-icon
+                                +icon('password', 'socials_form_wellcome')
+                             input(type="text", placeholder="Пароль", name="user-password").talk-name__text
+                          label.talk__about-elem.talk__about_wellcome-elem.talk__about_wellcome-elem-center
+                             input(type="checkbox", name="user-name").talk-name__wellcome-btn
+                             .talk-name__btn-desc Я человек
+                          label.talk__about-elem.talk__about-quest Вы точно уверены?
+                          
+                          label.talk__about-elem.talk__about_wellcome-elem.talk__about_radio
+                             input(type="radio", name="user-name").talk-name__wellcome-radio
+                             .talk-name__btn-desc Да
+                          
+                             input(type="radio", name="user-name").talk-name__wellcome-radio
+                             .talk-name__btn-desc Не уверен
+
+                        ul.user__btns
+                          li.user__btns__elem.user__btns-auth
+                            button.user__button-auth 
+                              a(href="./works.html").user__button-href На главную
+                          
+                          li.user__btns__elem.user__btns-auth
+                            button.user__button-auth
+                              a(href="./blog.html").user__button-href Войти
