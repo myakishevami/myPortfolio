@@ -23,9 +23,11 @@ body
       .maincontent
         block content
           section.wellcome__hero
+           video(src="./assets/images/night.mp4", autoplay loop muted).wellcome__hero-video
            .parallax
-            .parallax__layer  
-              img(src='./assets/images/fon_night.png', alt="1").parallax__image
+              
+              .parallax__layer  
+                img(src='./assets/images/fon_night.png', alt="1").parallax__image
             
               - 
                 var socials = [
