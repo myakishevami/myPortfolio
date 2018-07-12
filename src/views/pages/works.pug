@@ -7,7 +7,7 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  section.hero
+  section.hero(id="second")
     - 
         var socials = [
           ['https://vk.com/sotnikova_m', 'vk'],
@@ -34,7 +34,7 @@ block content
                  .user__name Мария Мякишева
                  .user__info Личный сайт разработчика
 
-    a(href="#").down-btn.hero__down-btns.hero__down__work-btns
+    a(href="#first").down-btn.hero__down-btns.hero__down__work-btns
          +icon('arrow_down', 'hero__down-icon')
 
     .about__triangles.work__triangles
@@ -48,7 +48,7 @@ block content
     .works__bottom
       .block-title.block-title__work мои работы       
 
-  section.works__container
+  section.works__container(id="first")
     #slider-component
     
   section.talk
@@ -75,7 +75,7 @@ block content
             .reviews__elem-author-work 
               p — преподаватель
     .talk__form
-      form.talk__about
+      form(method="post" action="server.php" id="order-form").talk__about
         .talk__about-tittle связаться со мной
         .talk__about-main
           label.talk__about-elem 
@@ -85,10 +85,10 @@ block content
           label.talk__about-elem 
             input(type="text", placeholder="Ваше сообщение", name="user-message").talk-message__text.talk__about-color  
         .talk__button
-          button.talk__about-button.talk__about-color Отправить
+          button(type="submit").talk__about-button.talk__about-color Отправить
           button.talk__about-button.talk__about-color Очистить
 
-    a(href="#").down-btn.hero__down-btns.hero__down-btns-works
+    a(href="#second").down-btn.hero__down-btns.hero__down-btns-works
       +icon('arrow_down', 'hero__down-icon')
 
   footer.main__footer
@@ -125,5 +125,25 @@ block content
                 each item in contacts
                   li.footer-contacts__item
                    .footer-contacts__link.footer__text #{item[1]}
+  .hamburger-popups
+    .hamburger-popups__content
+      .hamburger-popups__content-header
+        a(href="#").hamburger-popups__close
+          svg.hamburger-popups__close-img
+            line(x1="1" y1="31" x2="31" y2="1" stroke="white" stroke-width="4")
+            line(x1="1" y1="1" x2="31" y2="31" stroke="white" stroke-width="4")
+      ul.hamburger-popups__list
+        nav.nav__hamburger 
+          ul.nav__list__hamburger
+            li.nav__item__hamburger
+              a(href="./works.html").nav__link__hamburger Мои работы
+            li.nav__item__hamburger
+              a(href="./blog.html").nav__link__hamburger Блог
+            li.nav__item__hamburger
+              a(href="./about.html#").nav__link__hamburger Обо мне
+            li.nav__item__hamburger
+              a(href="./wellcome.html").nav__link__hamburger Авторизация  
 block scripts
+  script(src='about.bundle.js')
+  script(src='blog.bundle.js')
   script(src='works.bundle.js')

@@ -8,6 +8,8 @@ module.exports = {
     auth: "./src/assets/scripts/auth.js",
     works: "./src/assets/scripts/works.js",
     blog: "./src/assets/scripts/blog.js",
+    jquery: "./src/assets/scripts/jquery.fullpage.js",
+    jquery_main: "./src/assets/scripts/main.js",
     vendor: ["vue"]
   },
   output: {

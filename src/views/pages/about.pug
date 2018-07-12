@@ -31,7 +31,7 @@ block content
                  .user__name Мария Мякишева
                  .user__info Личный сайт разработчика
 
-    a(href="#").down-btn.hero__down-btns
+    a(href="#first").down-btn.hero__down-btns
          +icon('arrow_down', 'hero__down-icon')
 
     .about__triangles
@@ -43,7 +43,7 @@ block content
           svg(viewbox = "0 0 900 180" preserveAspectRatio = "none").triangle.triangle__right
             polygon(points = "900 0, 900 180, 0 180")
 
-  section.about
+  section.about(id="first")
     .about__left
       
       .about__left-main

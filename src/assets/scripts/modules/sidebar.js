@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   for (var i=0; i<elems__left.length; i++)
   { elems__left[i].onclick = (function (e) {
-    e.preventDefault();
+   // e.preventDefault();
     
     document.querySelector(".blog__about__left").classList.remove("blog__about__left__active");
     //document.querySelector(elems__right[i]).classList.add("active");
